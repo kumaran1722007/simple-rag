@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+asyncio1.py
+main.py
+Newpyt.py
+palindromecheck.py
+python.py
+rmDuplicate.py
+Rag.py
