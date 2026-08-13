@@ -1,5 +1,5 @@
 from ollama import Client
-import Rag
+import data
 
 client=Client()
 
@@ -14,9 +14,9 @@ def add_chunks(chunks):
     embedding=client.embed(model=EB_model,input=chunks)['embeddings'][0]
     VECTOR_DB.append((chunks,embedding))
     
-for i,chunks in enumerate(Rag.data):
+for i,chunks in enumerate(data.data):
     add_chunks(chunks)
-    print(f"added {i+1}/{len(Rag.data)}to vector db")
+    print(f"added {i+1}/{len(data.data)}to vector db")
 print(VECTOR_DB[0])
 
 
